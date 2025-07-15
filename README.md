@@ -20,7 +20,7 @@ Este portfólio é uma aplicação simples e responsiva criada com HTML, CSS e J
 ## 🚀 Acesse Online
 
 Você pode visualizar o portfólio diretamente por este link:  
-👉 [**Clique aqui para ver online**]([https://kaio-link-aqui.netlify.app](https://kaiomungo.github.io/portfolio-kaio-mungo/)) 
+👉 [**Clique aqui para ver online**][https://kaio-link-aqui.netlify.app](https://kaiomungo.github.io/portfolio-kaio-mungo/)
 
 ## 📁 Estrutura do Projeto
 
