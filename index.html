@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfólio</title>
+</head>
+<body>
+
+    <div class="particulas"></div>
+
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu_link">Inicio</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu_link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu_link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu_link">Contato</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        
+        <img src="./img/foto_kaio.JPEG.jpeg" alt="Foto do Kaio" class="foto_kaio">
+        <h1>Kaio Mungo</h1>
+        <p class="subtitulo">Desenvolvedor de Sistemas</p>
+        
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre_titulo">Sobre Mim</h2>
+        <div class="sobre_caixa">
+            <p class="sobre_paragrafo">
+                Sou um estudante dedicado e motivado, atualmente cursando Análise e Desenvolvimento de Sistemas na Faculdade Impacta. Apesar da minha pouca idade, estou extremamente entusiasmado para ingressar no mercado de trabalho e dar início à minha trajetória profissional. Possuo conhecimento intermediário/avançado em inglês e nível básico em espanhol. Além disso, tenho domínio do pacote Office e conclui diversos cursos voltados à área de programação pela Fundação Bradesco, Udemy e Alura. Destaco minha excelente capacidade de comunicação e meu forte espírito de trabalho em equipe, o que contribui para um ambiente colaborativo e produtivo.
+            </p>
+        </div>
+
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos_titulo">Meus Projetos</h2>
+        <div class="projetos_caixa">
+            
+            <div class="projetos_card">
+                <a href="https://github.com/KaioMungo/Web_site_spotify" target="_blank"><img src="./img/spotify.jpeg" alt="Spotify" class="projetos_imagem"></a>
+                <h3 class="titulo_projeto">Site Spotify</h3>
+                <p class="paragrafo_projeto">Site Spotify interativo, criado apartir de HTML, CSS e JavaScript.</p>
+            </div>
+
+            <div class="projetos_card">
+                <a href="https://github.com/KaioMungo/Catalogo-de-jogos" target="_blank"><img src="./img/catalogo.jpeg" alt="Catálogo de Jogos" class="projetos_imagem"></a>
+                <h3 class="titulo_projeto">Catálogo de Jogos</h3>
+                <p class="paragrafo_projeto">Catálogo de jogos completo, integrado com API de cadastro de conta de usuário.</p>
+            </div>
+
+
+
+            <div class="projetos_card">
+                <a href="https://github.com/KaioMungo/ProjetoFlask" target="_blank"><img src="./img/flask.jpeg" alt="Projeto Flask" class="projetos_imagem"></a>
+                <h3 class="titulo_projeto">Projeto Flask</h3>
+            <p class="paragrafo_projeto">API com flask usando Python, GRUD interativo para um sistema escolar(ALUNO|PROFESSOR|TURMA).</p>
+            </div>
+
+            <a href="https://github.com/KaioMungo?tab=repositories" target="_blank"><button class="botao_projetos">🔗 Mais projetos</button></a>
+        
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos_titulo">Entre em Contato</h2>
+        <form class="formulario_contato" id="formulario" onsubmit="enviarMensagem(event)">
+            <div class="grupo_form">
+                <input placeholder="Nome" class="info_form" id="nome" type="text">
+            </div>
+            
+            <div class="grupo_form">
+                <textarea placeholder="Digite sua Mensagem" class="info_form" id="mensagem" type="text"></textarea>
+            </div>
+
+            <button type="submit" class="form_botao">Enviar WhatsApp</button>
+            
+
+        </form>
+
+        <footer class="rodape">
+            <p>
+                👨🏻‍💻Codigo realizado por Kaio Mungo.<br>
+                ✉️Entre em contato via Email: Kaiao2006@gmail.com<br>
+                🫡GitHub: KaioMungo
+
+            </p>
+
+        </footer>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

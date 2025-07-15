@@ -1,0 +1,361 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+
+html{
+    scroll-behavior: smooth; /*rolagem mais suave */
+}
+
+:root{
+    --primaria: #0A192F;
+    --secundaria: #64FFDA;
+    --escuro: #0F172A;
+    --maisEscuro: #0A0F1C;
+    --claro: #E2E8F0;
+    --vidro: rgb(255, 255, 255, 0.1);
+    /*estabele variaveis de cores, para serem ultilizadas todas as vezes ao chamar a propriedade var() */
+
+}
+
+body{
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+
+.navegacao{
+    position: fixed;
+    background-color: rgba(15, 23, 42, 0.5);
+    width: 100%;
+    height: 9%;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    list-style: none;
+    gap: 3rem;
+    height: 100%; 
+}
+
+.menu_link{
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    font-family: cursive;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.menu_link::after{
+    content: "";
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria)); /*cria um degradê */
+    transition: 0.5s ease;
+    /* cria uma linha abaixo do menu, dinâmico ao toque */
+}
+
+.menu_link:hover::after{
+    width: 100%;  /*faz aparecer essa linha dinâmica ao toque */
+    
+}
+
+.cabecalho{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto_kaio{
+    width: 270px;
+    height: 270px;
+    box-shadow: 0 0 20px rgba(165, 241, 250, 0.3);
+    border-radius: 50%;
+    border: solid var(--vidro) 2px;
+    animation: flutuar 3s ease-in-out infinite; /*animation faz uma animação, porem usa uma animação ja criada anteriormente, dura 3 segundos e é infinito */
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--claro);
+    margin: 10px 0;
+}
+
+.subtitulo{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--secundaria);
+}
+
+.sobre{
+    padding: 6rem 2rem;
+
+}
+
+
+.sobre_titulo{
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secundaria);
+    padding-bottom: 1rem;
+
+
+}
+
+.sobre_caixa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: var(--maisEscuro);
+    padding: 2rem;
+    max-width: 850px;
+    margin: 0 auto;
+    border: solid var(--vidro) 2px;
+    border-radius: 16px;
+
+
+}
+
+.sobre_paragrafo{
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--claro);
+
+}
+
+.projetos{
+    padding: 6rem 2rem;
+
+
+}
+
+.projetos_titulo{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--secundaria);
+    padding: 1rem;
+}
+
+
+.projetos_card{
+    background: var(--maisEscuro);
+    border: solid var(--vidro) 2px;
+    padding: auto;
+    border-radius: 16px;
+    overflow: hidden;
+    height:310px;
+}
+
+.projetos_card:hover{
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+    transform: translateY(-10px) scale(1.03); /*movimenta a div para cima (eixo y) */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.projetos_caixa{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr)); /* faz com que a div fique uma ao lado da outra, seguindo o padrão estabelecido */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+
+}
+
+.projetos_imagem{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    
+
+
+}
+
+.titulo_projeto{
+    padding-top: 0.8rem;
+    padding-left: 1rem;
+    color: var(--secundaria);
+    font-weight: 700;
+    font-size: 20px;
+
+}
+
+.paragrafo_projeto{
+    padding-top: 0.5rem;
+    font-size: 15px;
+    padding-left:0.9rem;
+    font-weight: 600;
+    color: var(--claro);
+}
+
+.contatos{
+    padding: 6rem 2rem;
+}
+
+.contatos_titulo{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--secundaria);
+    padding: 1rem;
+}
+
+.formulario_contato{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background:var(--maisEscuro) ;
+    border: solid var(--vidro) 2px;
+    border-radius: 16px;
+    max-width: 750px;
+    height: 300px;
+    margin: 0 auto;
+   
+}
+
+.grupo_form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+
+  
+
+}
+
+.info_form{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    margin: 0 auto;
+    background: var(--escuro);
+    color: var(--claro);
+    height: 30px;
+    padding: 0.5rem;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    max-width: 500px;
+    max-height: 200px;
+      
+}
+
+.info_form:hover{
+    border: solid var(--secundaria) 2px;
+    
+}
+
+.form_botao{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 35px;
+    text-align: center;
+    padding-top: 0.5rem;
+    cursor: pointer;
+    color:var(--claro);
+    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.5 ease;
+    border: none;
+
+}
+
+.form_botao:hover{
+    border: var(--secundaria) solid 2px;
+    box-shadow: rgba(79, 70, 229, 0.3);
+    transform: translateY(-4px); /* faz com que o botao ao ser clicado movimente para cima (eixo y) */
+    
+}
+
+.particulas{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /*fica por tras de todo o site */
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    background: radial-gradient(circle at 10% 20%, rgb(167, 236, 229) 0%, transparent 20%), radial-gradient(circle at 90% 80%, rgb(167, 236, 229)  0%, transparent 25%), var(--maisEscuro);
+    /* propriedade que faz esfumaçados ao fundo da tela */
+}
+
+@keyframes flutuar{
+    0%, 100%{
+        transform: translateY(0)
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+}    /*cria uma variavel de movimento, chamada FLUTUAR, no momento inicial e final(0% e 100%) a foto fica parada, agora no momento intermédiario (50%) ela se movimenta para cima (eixo y) */ 
+
+.rodape{
+    display: flex;
+    justify-content: center;
+    background: var(--maisEscuro);
+    border-radius:8px;
+    padding: 0.8rem;
+    height: 100px;
+    margin-top: 2rem;
+    color: var(--claro);
+    border: solid var(--vidro) 2px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.botao_projetos{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 35px;
+    text-align: center;
+    padding-top: 0.5rem;
+    cursor: pointer;
+    color:var(--claro);
+    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.5 ease;
+    border: none;
+    margin-left: 500px;
+    text-decoration: none;
+}
+
+.botao_projetos:hover{
+    border: var(--secundaria) solid 2px;
+    box-shadow: rgba(79, 70, 229, 0.3);
+    transform: translateY(-4px);
+
+}
+
+a{
+    text-decoration: none;
+}
+
+    
