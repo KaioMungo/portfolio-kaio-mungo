@@ -18,3 +18,26 @@
 Com o uso do GetElementById as variaveis nome e mensagem são armazenadas e usadas em uma template string (com o numero de telefone do destinatário e a mensagem que deverá ser enviada) logo após serem formatadas da maneira correta
 
 */
+
+function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  }
+
+
+
+
+

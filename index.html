@@ -39,9 +39,10 @@
     <section id="sobre" class="sobre">
         <h2 class="sobre_titulo">Sobre Mim</h2>
         <div class="sobre_caixa">
-            <p class="sobre_paragrafo">
-                Sou um estudante dedicado e motivado, atualmente cursando Análise e Desenvolvimento de Sistemas na Faculdade Impacta. Apesar da minha pouca idade, estou extremamente entusiasmado para ingressar no mercado de trabalho e dar início à minha trajetória profissional. Possuo conhecimento intermediário/avançado em inglês e nível básico em espanhol. Além disso, tenho domínio do pacote Office e conclui diversos cursos voltados à área de programação pela Fundação Bradesco, Udemy e Alura. Destaco minha excelente capacidade de comunicação e meu forte espírito de trabalho em equipe, o que contribui para um ambiente colaborativo e produtivo.
-            </p>
+            <p class="sobre_paragrafo">Olá! Me chamo Kaio Mungo e sou estudante de Análise e Desenvolvimento de Sistemas na Faculdade Impacta. Tenho grande interesse pela área de tecnologia e estou em busca da minha primeira oportunidade como desenvolvedor júnior ou estagiário.</p>
+            <p class="sobre_paragrafo">Já realizei diversos cursos de programação pela Fundação Bradesco e tenho conhecimentos sólidos em HTML, CSS, JavaScript, Git, Python e banco de dados. Também estou aprendendo frameworks como Flask e React, além de praticar projetos próprios para evoluir minhas habilidades técnicas.</p>
+            <p class="sobre_paragrafo">Possuo inglês em nível intermediário/avançado, o que me permite consumir documentação e acompanhar conteúdos internacionais com facilidade. Também tenho facilidade com comunicação, trabalho em equipe e estou sempre disposto a aprender.</p>
+            <p class="sobre_paragrafo">Meu objetivo é crescer profissionalmente e contribuir com soluções criativas e eficientes dentro de uma equipe de tecnologia.</p>
         </div>
 
     </section>
@@ -50,29 +51,61 @@
         <h2 class="projetos_titulo">Meus Projetos</h2>
         <div class="projetos_caixa">
             
-            <div class="projetos_card">
-                <a href="https://github.com/KaioMungo/Web_site_spotify" target="_blank"><img src="./img/spotify.jpeg" alt="Spotify" class="projetos_imagem"></a>
-                <h3 class="titulo_projeto">Site Spotify</h3>
-                <p class="paragrafo_projeto">Site Spotify interativo, criado apartir de HTML, CSS e JavaScript.</p>
+            <div class="projetos_card" onclick="openModal('modal1')">
+                <img src="./img/bot_discord.png" alt="Bot do Discord" class="projetos_imagem">
+                <h3 class="titulo_projeto">Discord Bot</h3>
+                <p class="paragrafo_projeto">Discord bot realizado em python, totalmente interativo com diversos comandos.</p>
             </div>
 
-            <div class="projetos_card">
-                <a href="https://github.com/KaioMungo/Catalogo-de-jogos" target="_blank"><img src="./img/catalogo.jpeg" alt="Catálogo de Jogos" class="projetos_imagem"></a>
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal1')">&times;</span>
+                    <h2>Bot Discord</h2>
+                    <img src="./img/bot_discord.png" alt="bot_discord" class="modal_imagem">
+                    <p>O bot para Discord foi desenvolvido em Python utilizando a biblioteca discord.py, que permite criar bots assíncronos com suporte a eventos e comandos personalizados. Durante o projeto, aprendi a lidar com programação assíncrona (async/await), criação de comandos com @bot.command, e manipulação de eventos como mensagens e entrada de membros. Também utilizei a biblioteca requests para fazer requisições a APIs externas de forma simples. O desenvolvimento foi feito localmente, com o bot rodando direto no computador durante os testes. As principais ferramentas utilizadas foram Python, discord.py e requests.</p>
+                    <a href="https://github.com/KaioMungo/Discord_bot" target="_blank" class="link_modal">*Clique aqui* para ver no GitHub</a>
+                </div>
+            </div>
+
+
+
+            <div class="projetos_card" onclick="openModal('modal2')">
+                <img src="./img/catalogo.jpeg" alt="Catálogo de Jogos" class="projetos_imagem">
                 <h3 class="titulo_projeto">Catálogo de Jogos</h3>
                 <p class="paragrafo_projeto">Catálogo de jogos completo, integrado com API de cadastro de conta de usuário.</p>
             </div>
 
 
-
-            <div class="projetos_card">
-                <a href="https://github.com/KaioMungo/ProjetoFlask" target="_blank"><img src="./img/flask.jpeg" alt="Projeto Flask" class="projetos_imagem"></a>
-                <h3 class="titulo_projeto">Projeto Flask</h3>
-            <p class="paragrafo_projeto">API com flask usando Python, GRUD interativo para um sistema escolar(ALUNO|PROFESSOR|TURMA).</p>
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal2')">&times;</span>
+                    <h2>Catalogo de Jogos</h2>
+                    <img src="./img/catalogo.jpeg" alt="Catálogo de Jogos" class="modal_imagem">
+                    <p>Desenvolvi um site de catálogo de jogos interativo utilizando HTML, CSS e JavaScript puro, com foco em uma interface amigável e responsiva. A aplicação se conecta a uma API de autenticação que permite aos usuários realizarem cadastro e login, com validação de dados e controle de sessão via localStorage. O projeto conta com exibição dinâmica de jogos e interações que tornam a navegação mais fluida e envolvente. Durante o desenvolvimento, aprofundei meus conhecimentos em manipulação do DOM, consumo de APIs com fetch, organização de arquivos web e boas práticas de responsividade. Esse projeto foi essencial para consolidar minha base em desenvolvimento front-end e integração com serviços externos.</p>
+                    <a href="https://github.com/KaioMungo/Catalogo-de-jogos" target="_blank" class="link_modal">*Clique aqui* para ver no GitHub</a>
+                </div>
             </div>
 
-            <a href="https://github.com/KaioMungo?tab=repositories" target="_blank"><button class="botao_projetos">🔗 Mais projetos</button></a>
-        
+
+
+            <div class="projetos_card" onclick="openModal('modal3')">
+                <img src="./img/flask.jpeg" alt="Projeto Flask" class="projetos_imagem">
+                <h3 class="titulo_projeto">Projeto Flask</h3>
+                <p class="paragrafo_projeto">API com flask usando Python, GRUD interativo para um sistema escolar(ALUNO|PROFESSOR|TURMA).</p>
+            </div>
+
+
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal3')">&times;</span>
+                    <h2>Projeto Flask</h2>
+                    <img src="./img/flask.jpeg" alt="Projeto Flask" class="modal_imagem">
+                    <p>Desenvolvi um sistema web completo utilizando Flask como framework principal, estruturado em uma arquitetura de microsserviços. O projeto é composto por três APIs independentes: uma API principal responsável pelo CRUD de alunos, professores e turmas, uma API para registro de atividades dos professores, e outra para reserva de salas associadas às turmas. As APIs se comunicam entre si através de requisições HTTP, promovendo escalabilidade e separação de responsabilidades. Utilizei Flask-SQLAlchemy para a modelagem e persistência dos dados em bancos SQLite, além de aplicar conceitos de BluePrints, rotas RESTful, e boas práticas de organização de código. Durante o desenvolvimento, aprimorei meus conhecimentos em desenvolvimento backend com Flask, integração entre serviços, e estrutura modular de APIs, além de reforçar conceitos como validação, tratamento de erros e testes locais.</p>
+                    <a href="https://github.com/KaioMungo/ProjetoFlask" target="_blank" class="link_modal">*Clique aqui* para ver no GitHub</a>
+                </div>
+            </div>
         </div>
+        <a href="https://github.com/KaioMungo?tab=repositories" target="_blank" class="botao_projetos">🔗 Mais projetos</a>
     </section>
 
     <section id="contatos" class="contatos">
@@ -83,23 +116,21 @@
             </div>
             
             <div class="grupo_form">
-                <textarea placeholder="Digite sua Mensagem" class="info_form" id="mensagem" type="text"></textarea>
+                <textarea placeholder="Digite sua Mensagem" class="info_form" id="mensagem"></textarea>
             </div>
 
             <button type="submit" class="form_botao">Enviar WhatsApp</button>
             
-
         </form>
+    </section>
 
-        <footer class="rodape">
-            <p>
-                👨🏻‍💻Codigo realizado por Kaio Mungo.<br>
-                ✉️Entre em contato via Email: Kaiao2006@gmail.com<br>
-                🫡GitHub: KaioMungo
-
-            </p>
-
-        </footer>
+    <footer class="rodape">
+        <p>
+            👨🏻‍💻 Codigo realizado por Kaio Mungo.<br>
+            ✉️ Entre em contato via Email: Kaiao2006@gmail.com<br>
+            🫡 GitHub: KaioMungo
+        </p>
+    </footer>
 
 
     <script src="main.js"></script>
