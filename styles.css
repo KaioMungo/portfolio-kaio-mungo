@@ -477,12 +477,16 @@ a{
     }
 
     .menu {
-        flex-direction:row; /* Menu fica na vertical */
+        display: flex;
+        flex-direction:row; /* Menu fica na horizontal */
         gap: 1.0rem;
     }
     .menu_link {
+        text-decoration: none;
+        color: var(--claro);
         font-weight: 500;
         font-family: cursive;
+        position: relative;
     }
 
     /* Cabeçalho */
