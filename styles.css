@@ -321,15 +321,18 @@ h1{
 .rodape{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background: var(--maisEscuro);
     border-radius:8px;
-    padding: 0.8rem;
-    height: 100px;
+    padding: 1.5rem;
+    height: auto;
     margin-top: 2rem;
     color: var(--claro);
     border: solid var(--vidro) 2px;
     font-size: 18px;
     font-weight: 500;
+    gap: 1rem;
 }
 
 .botao_projetos{
@@ -414,4 +417,122 @@ a{
     align-items: center;
     padding-top: 1.2rem;
 }
-    
+
+.botao_download{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 250px;
+    width: 200px;
+    height: 45px;
+    cursor: pointer;
+    color:var(--claro);
+    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.5s ease;
+    border: none;
+    margin: 2rem auto 0;
+    text-decoration: none;
+}
+
+.botao_download:hover{
+    border: var(--secundaria) solid 2px;
+    box-shadow: rgba(79, 70, 229, 0.3);
+    transform: translateY(-4px);
+}   
+
+.imagens_rodape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.imagens_rodape img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease;
+}
+
+.imagens_rodape img:hover {
+    transform: scale(1.15);
+}
+
+.desenvolvido{
+    color: var(--secundaria);
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* --- ESTILOS RESPONSIVOS --- */
+
+@media (max-width: 768px) {
+    /* Navegação */
+    .navegacao {
+        height: auto; /* Altura se ajusta ao conteúdo */
+        padding: 1rem;
+    }
+
+    .menu {
+        flex-direction: column; /* Menu fica na vertical */
+        gap: 1.5rem;
+    }
+
+    /* Cabeçalho */
+    .cabecalho {
+        padding: 0 1rem; /* Evita que o texto cole nas bordas */
+    }
+
+    .foto_kaio {
+        width: 200px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .subtitulo {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* Seções */
+    .sobre, .projetos, .contatos {
+        padding: 4rem 1rem; /* Diminui o espaçamento interno */
+    }
+
+    .sobre_titulo, .projetos_titulo, .contatos_titulo {
+        font-size: 2rem;
+    }
+
+    .sobre_paragrafo {
+        font-size: 16px;
+    }
+
+    /* Formulário de Contato */
+    .formulario_contato {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .info_form, .form_botao {
+        width: 90%; /* Campos ocupam mais espaço na tela */
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 90%;
+        margin: 25% auto;
+    }
+
+    .modal_imagem {
+        width: 100%; /* Imagem se ajusta ao modal */
+        height: auto;
+        max-width: 280px;
+    }
+}
