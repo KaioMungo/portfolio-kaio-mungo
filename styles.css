@@ -477,8 +477,12 @@ a{
     }
 
     .menu {
-        flex-direction: column; /* Menu fica na vertical */
-        gap: 1.5rem;
+        flex-direction:row; /* Menu fica na vertical */
+        gap: 1.0rem;
+    }
+    .menu_link {
+        font-weight: 500;
+        font-family: cursive;
     }
 
     /* Cabeçalho */
