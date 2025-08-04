@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+</head>
+<body>
+
+    <div class="particulas"></div>
+
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu_link">Inicio</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu_link">Sobre</a>
+            </li>
+            <li>
+                <a href="#ferramentas" class="menu_link">Ferramentas</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu_link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu_link">Contato</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        
+        <img src="./img/foto_kaio.JPEG.jpeg" alt="Foto do Kaio" class="foto_kaio">
+        <h1>Kaio Mungo</h1>
+        <p class="subtitulo">Desenvolvedor de Sistemas / Analista de Dados </p>
+       <a href="./img/curriculo_KaioMungo.pdf" download="curriculo_KaioMungo.pdf" type="application/pdf" class="botao_download">📄 Baixar CV</a>  
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre_titulo">Sobre Mim</h2>
+        <div class="sobre_caixa">
+            <p class="sobre_paragrafo">Olá! Me chamo Kaio Mungo e sou estudante de Análise e Desenvolvimento de Sistemas na Faculdade Impacta. Tenho grande interesse pela área de tecnologia e estou em busca da minha primeira oportunidade como desenvolvedor, analista de dados, suporte de TI júnior ou estagiário.</p>
+            <p class="sobre_paragrafo">Já realizei diversos cursos de programação pela Fundação Bradesco e tenho conhecimentos sólidos em HTML, CSS, JavaScript, Git, Python, Docker e banco de dados. Também estou aprendendo frameworks como Flask e React, além de praticar projetos próprios para evoluir minhas habilidades técnicas.</p>
+            <p class="sobre_paragrafo">Possuo inglês em nível intermediário/avançado, o que me permite consumir documentação e acompanhar conteúdos internacionais com facilidade. Também tenho facilidade com comunicação, trabalho em equipe e estou sempre disposto a aprender.</p>
+            <p class="sobre_paragrafo">Meu objetivo é crescer profissionalmente e contribuir com soluções criativas e eficientes dentro de uma equipe de tecnologia.</p>
+        </div>
+
+    </section>
+
+
+    <section id="ferramentas" class="ferramentas">
+        <h2 class="titulo_ferramentas">Ferramentas Conhecidas</h2>
+        <div class="caixa_ferramentas">
+            <div class="ferramenta">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" class="ferramenta_imagem">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" class="ferramenta_imagem">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" class="ferramenta_imagem">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="ferramenta_imagem">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" class="ferramenta_imagem">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" class="ferramenta_imagem">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" alt="Docker" class="ferramenta_imagem" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="SQL" class="ferramenta_imagem" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" alt="Kotlin" class="ferramenta_imagem">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original-wordmark.svg" alt="SQL Server" class="ferramenta_imagem"/>
+          
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos_titulo">Meus Projetos</h2>
+        <div class="projetos_caixa">
+            
+            <div class="projetos_card" onclick="openModal('modal1')">
+                <img src="./img/bot_discord.png" alt="Bot do Discord" class="projetos_imagem">
+                <h3 class="titulo_projeto">Discord Bot</h3>
+                <p class="paragrafo_projeto">Discord bot realizado em python, totalmente interativo com diversos comandos.</p>
+            </div>
+
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal1')">&times;</span>
+                    <h2>Bot Discord</h2>
+                    <img src="./img/bot_discord.png" alt="bot_discord" class="modal_imagem">
+                    <p>O bot para Discord foi desenvolvido em Python utilizando a biblioteca discord.py, que permite criar bots assíncronos com suporte a eventos e comandos personalizados. Durante o projeto, aprendi a lidar com programação assíncrona (async/await), criação de comandos com @bot.command, e manipulação de eventos como mensagens e entrada de membros. Também utilizei a biblioteca requests para fazer requisições a APIs externas de forma simples. O desenvolvimento foi feito localmente, com o bot rodando direto no computador durante os testes. As principais ferramentas utilizadas foram Python, discord.py e requests.</p>
+                    <a href="https://github.com/KaioMungo/Discord_bot" target="_blank" class="link_modal">*Clique aqui* para ver no GitHub</a>
+                </div>
+            </div>
+
+
+
+            <div class="projetos_card" onclick="openModal('modal2')">
+                <img src="./img/catalogo.jpeg" alt="Catálogo de Jogos" class="projetos_imagem">
+                <h3 class="titulo_projeto">Catálogo de Jogos</h3>
+                <p class="paragrafo_projeto">Catálogo de jogos completo, integrado com API de cadastro de conta de usuário.</p>
+            </div>
+
+
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal2')">&times;</span>
+                    <h2>Catalogo de Jogos</h2>
+                    <img src="./img/catalogo.jpeg" alt="Catálogo de Jogos" class="modal_imagem">
+                    <p>Desenvolvi um site de catálogo de jogos interativo utilizando HTML, CSS e JavaScript puro, com foco em uma interface amigável e responsiva. A aplicação se conecta a uma API de autenticação que permite aos usuários realizarem cadastro e login, com validação de dados e controle de sessão via localStorage. O projeto conta com exibição dinâmica de jogos e interações que tornam a navegação mais fluida e envolvente. Durante o desenvolvimento, aprofundei meus conhecimentos em manipulação do DOM, consumo de APIs com fetch, organização de arquivos web e boas práticas de responsividade. Esse projeto foi essencial para consolidar minha base em desenvolvimento front-end e integração com serviços externos.</p>
+                    <a href="https://github.com/KaioMungo/Catalogo-de-jogos" target="_blank" class="link_modal">*Clique aqui* para ver no GitHub</a>
+                </div>
+            </div>
+
+
+
+            <div class="projetos_card" onclick="openModal('modal3')">
+                <img src="./img/flask.jpeg" alt="Projeto Flask" class="projetos_imagem">
+                <h3 class="titulo_projeto">Projeto Flask</h3>
+                <p class="paragrafo_projeto">API com flask usando Python, GRUD interativo para um sistema escolar(ALUNO|PROFESSOR|TURMA).</p>
+            </div>
+
+
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal3')">&times;</span>
+                    <h2>Projeto Flask</h2>
+                    <img src="./img/flask.jpeg" alt="Projeto Flask" class="modal_imagem">
+                    <p>Desenvolvi um sistema web completo utilizando Flask como framework principal, estruturado em uma arquitetura de microsserviços. O projeto é composto por três APIs independentes: uma API principal responsável pelo CRUD de alunos, professores e turmas, uma API para registro de atividades dos professores, e outra para reserva de salas associadas às turmas. As APIs se comunicam entre si através de requisições HTTP, promovendo escalabilidade e separação de responsabilidades. Utilizei Flask-SQLAlchemy para a modelagem e persistência dos dados em bancos SQLite, além de aplicar conceitos de BluePrints, rotas RESTful, e boas práticas de organização de código. Durante o desenvolvimento, aprimorei meus conhecimentos em desenvolvimento backend com Flask, integração entre serviços, e estrutura modular de APIs, além de reforçar conceitos como validação, tratamento de erros e testes locais.</p>
+                    <a href="https://github.com/KaioMungo/ProjetoFlask" target="_blank" class="link_modal">*Clique aqui* para ver no GitHub</a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/KaioMungo?tab=repositories" target="_blank" class="botao_projetos">🔗 Mais projetos</a>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos_titulo">Entre em Contato</h2>
+        <h3>(Inativo)</h3>
+        <form class="formulario_contato" id="formulario" onsubmit="enviarMensagem(event)">
+            <div class="grupo_form">
+                <input placeholder="Nome" class="info_form" id="nome" type="text">
+            </div>
+            
+            <div class="grupo_form">
+                <textarea placeholder="Digite sua Mensagem" class="info_form" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="form_botao">Enviar WhatsApp</button>
+            
+        </form>
+    </section>
+
+    <footer class="rodape">
+        <p class="desenvolvido"> 👨🏻‍💻 Desenvolvido por Kaio Nogueira Mungo</p>
+
+        <div class="imagens_rodape">
+
+            <a href="https://www.linkedin.com/in/kaio-mungo-361461306/" target="_blank" title="Meu Perfil no LinkedIn"><img src="./img/linkedin.png" alt="Ícone do LinkedIn"></a>
+            <a href="mailto:ksiso2006@exemplo.com" title="Clique para me enviar um e-mail"><img src="./img/email.png" alt="Ícone de E-mail"></a>
+            <a href="https://github.com/KaioMungo" target="_blank" title="Meus Repositórios no GitHub"><img src="./img/github.png" alt="Ícone do GitHub"></a>
+        
+        </div>
+
+           
+    </footer>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
